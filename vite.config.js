@@ -17,8 +17,6 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
-
-
   },
 
   resolve: {
@@ -26,7 +24,7 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'src/components'),
       '@views': resolve(__dirname, 'src/views'),
-      'assets': resolve(__dirname, 'src/assets'),
+      '@assets': resolve(__dirname, 'src/assets'),
       '@stores': resolve(__dirname, 'src/stores'),
     }
   },
@@ -35,7 +33,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData:`
-          @import "@/assets/styles/main.scss";
+          @import "@assets/styles/main.scss";
         `
       }
     }
