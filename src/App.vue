@@ -30,7 +30,9 @@ import HelloWorld from './components/HelloWorld.vue'
 
 .div {
   &-a {
-    background-color: red;
+    background-color: $red-color;
   }
 }
+
+
 </style>
