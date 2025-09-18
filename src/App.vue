@@ -14,6 +14,8 @@ import HelloWorld from './components/HelloWorld.vue'
   <HelloWorld msg="Vite + Vue" />
 </template>
 
+return
+
 <style lang="scss">
 .logo {
   height: 6em;
@@ -30,9 +32,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 .div {
   &-a {
-    background-color: $red-color;
+    background-color: red;
   }
 }
-
-
 </style>

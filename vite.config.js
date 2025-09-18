@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import {resolve} from 'path'
+import { resolve } from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -17,8 +17,6 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
-
-
   },
 
   resolve: {
@@ -26,18 +24,18 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'src/components'),
       '@views': resolve(__dirname, 'src/views'),
-      'assets': resolve(__dirname, 'src/assets'),
+      '@assets': resolve(__dirname, 'src/assets'),
       '@stores': resolve(__dirname, 'src/stores'),
-    }
+    },
   },
 
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData:`
-          @import "@/assets/styles/main.scss";
-        `
-      }
-    }
-  }
+        additionalData: `
+          @import "@assets/styles/main.scss";
+        `,
+      },
+    },
+  },
 })
